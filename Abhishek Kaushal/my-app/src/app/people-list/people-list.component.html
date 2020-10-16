@@ -1,0 +1,27 @@
+<h1>People Table From JSON</h1>
+<table border="1">
+  <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>gender</th>
+  </tr>
+  <tr *ngFor = "let p of people">
+    <td>{{p.name}}</td>
+    <td>{{p.age}}</td>
+    <td>{{p.gender}}</td>
+  </tr>
+</table>
+
+<h1>People Table From Array</h1>
+<table border="1">
+  <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>gender</th>
+  </tr>
+  <tr *ngFor = "let p of people1">
+    <td>{{p.getName()}}</td>
+    <td>{{p.getAge()}}</td>
+    <td>{{p.getGender()}}</td>
+  </tr>
+</table>

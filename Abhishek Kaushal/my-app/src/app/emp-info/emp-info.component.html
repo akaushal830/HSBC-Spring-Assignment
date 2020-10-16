@@ -1,0 +1,35 @@
+<h1>Employees</h1>
+
+<input type="button" (click) = "dispList()" value="DisplayList">
+<input type="button" (click) = "dispTable()" value="DisplayTable">
+<input type="button" (click) = "clear()" value="Clear">
+
+<div *ngIf= "getLi()">
+  Showing List
+  <ul *ngFor = "let emp of employees">
+    <li>{{emp.getEmpNo()}} --> {{emp.getEmpName()}} --> {{emp.getSalary()}} --> {{emp.getDesig()}} --> {{emp.getBonus()}} --> {{emp.getTotal()}}</li>
+  </ul>
+</div>
+
+<div *ngIf= "getTb()">
+  Showing Table
+  <table border="1">
+    <tr>
+      <th>Employee No</th>
+      <th>Employee Name</th>
+      <th>Salary</th>
+      <th>Designation</th>
+      <th>Bonus</th>
+      <th>Salary</th>
+    </tr>
+    <tr *ngFor = "let emp of employees">
+      <td>{{emp.getEmpNo()}} </td>
+      <td>{{emp.getEmpName()}}</td>
+      <td>{{emp.getSalary()}}</td>
+      <td>{{emp.getDesig()}}</td>
+      <td>{{emp.getBonus()}}</td>
+      <td>{{emp.getTotal()}}</td>
+    </tr>
+  </table>
+
+</div>
